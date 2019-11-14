@@ -4,6 +4,7 @@ install_oh_my_zsh() {
 }
 
 install_github(){
+  echo "Setting up github..." 
 }
 
 
