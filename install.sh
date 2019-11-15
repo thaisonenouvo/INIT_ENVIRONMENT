@@ -3,6 +3,9 @@ install_oh_my_zsh() {
   echo "Setting up zsh..." 
   && cd ~
   && git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+  && git clone https://github.com/zsh-users/zsh-completions#oh-my-zsh
+  && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 }
 
 install_github(){
@@ -45,6 +48,7 @@ if [[ -z $1 ]]; then
   read answer
   if echo "$answer" | grep -iq "^y" ;then
     echo "Installing dependencies..." \
+    && install_oh_my_zsh 
     && install_neovim \
     && echo "Finished installation."
   fi
