@@ -49,6 +49,7 @@ if [[ -z $1 ]]; then
   if echo "$answer" | grep -iq "^y" ;then
     echo "Installing dependencies..." \
     && install_oh_my_zsh 
+    && echo "Finished dowload package plugin for zshrc."
     && install_neovim \
     && echo "Finished installation."
   fi
