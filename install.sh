@@ -1,4 +1,3 @@
-  
 install_oh_my_zsh() {
   echo "Setting up zsh..." \
   && cd ~ \
@@ -60,3 +59,4 @@ if [[ -z $1 ]]; then
 else
   "install_$1" $1
 fi
+
