@@ -1,6 +1,8 @@
   
 install_oh_my_zsh() {
   echo "Setting up zsh..." 
+  && cd ~
+  && git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 }
 
 install_github(){
