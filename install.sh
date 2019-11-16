@@ -31,8 +31,9 @@ install_homebrew() {
 }
 install_npm() {
   echo "Setting up package npm global..." \
-  && npm install -g eslint \
-  && npm install -g react-native-cli \
+  && npm i -g eslint \
+  && npm i -g react-native-cli \
+  && npm i -g npm-check-updates \
   echo "Setting up package npm global..." 
 }
 
