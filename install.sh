@@ -24,7 +24,10 @@ install_homebrew() {
   # && brew install qt5  \
   # && pip3 install qutebrowser \
   # && brew install neovim \ 
+  # && brew install zsh-completions \
+  # && brew install zsh-syntax-highlighting \
   # && brew uninstall --force postgresql \
+  # && brew cask install iterm2 \
   # && rm -rf /usr/local/var/postgres \
   # && brew install postgres \
   # echo "Successing to setting homebrew..." 
@@ -45,6 +48,27 @@ install_neovim() {
   echo "Successing to setting neovim..." 
 }
 
+setup_git() {
+  read -r -p "Do you want to setup git? [y|N] " response
+  if [[ $response =~ (y|yes|Y) ]];then
+    git config --global user.email "thaison.coderstokyo@gmail.com" 
+    git config --global user.name "tranthaison1231" 
+    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+    git config --global color.ui true
+    git config --global color.diff-highlight.oldNormal "red bold"
+    git config --global color.diff-highlight.oldHighlight "red bold 52"
+    git config --global color.diff-highlight.newNormal "green bold"
+    git config --global color.diff.meta "11"
+    git config --global color.diff.frag "magenta bold"
+    git config --global color.diff.commit "yellow bold"
+    git config --global color.diff.old "red bold"
+    git config --global color.diff.new "green bold"
+    git config --global color.diff.whitespace "red reverse"
+
+    success "Setup Git Successfully"
+  fi
+}
+
 
 if [[ -z $1 ]]; then
   echo "This will delete all your previous homebrew, nvim, zsh settings. Proceed? (y/n)? "
@@ -55,6 +79,7 @@ if [[ -z $1 ]]; then
     && install_npm \
     && install_oh_my_zsh \
     && install_neovim \
+    && setup_git \
     && echo "Finished installation."
   fi
 else
