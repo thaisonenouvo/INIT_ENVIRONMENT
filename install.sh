@@ -18,7 +18,7 @@ install_homebrew() {
   echo "Setting up homebrew..." \
   && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
   && brew install yarn \
-  && brew install watchman 
+  && brew install watchman \ 
   && brew install tmux \
   && brew install heroku/brew/heroku \
   && brew install qt5  \
