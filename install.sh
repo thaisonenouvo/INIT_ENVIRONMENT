@@ -16,24 +16,27 @@ install_github(){
 
 install_homebrew() {
   echo "Setting up homebrew..." \
-  # && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
-  # && brew install yarn \
-  # && brew install watchman 
-  # && brew install tmux \
-  # && brew install heroku/brew/heroku \
-  # && brew install qt5  \
-  # && pip3 install qutebrowser \
-  # && brew install neovim \ 
-  # && brew install zsh-completions \
-  # && brew install zsh-syntax-highlighting \
-  # && brew uninstall --force postgresql \
-  # && brew cask install iterm2 \
-  # && rm -rf /usr/local/var/postgres \
-  # && brew install postgres \
-  # echo "Successing to setting homebrew..." 
+  && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+  && brew install yarn \
+  && brew install watchman 
+  && brew install tmux \
+  && brew install heroku/brew/heroku \
+  && brew install qt5  \
+  && pip3 install qutebrowser \
+  && brew install neovim \ 
+  && brew install zsh-completions \
+  && brew install zsh-syntax-highlighting \
+  && brew uninstall --force postgresql \
+  && brew cask install iterm2 \
+  && rm -rf /usr/local/var/postgres \
+  && brew install postgres \
+  echo "Successing to setting homebrew..." 
 }
 install_npm() {
   echo "Setting up package npm global..." \
+  && brew install nvm \ 
+  && source ~/.zshrc \
+  && mkdir ~/.nvm \ 
   && npm i -g eslint \
   && npm i -g react-native-cli \
   && npm i -g npm-check-updates \
@@ -76,8 +79,8 @@ if [[ -z $1 ]]; then
   if echo "$answer" | grep -iq "^y" ;then
     echo "Installing dependencies..." \
     && install_homebrew \
-    && install_npm \
     && install_oh_my_zsh \
+    && install_npm \
     && install_neovim \
     && setup_git \
     && echo "Finished installation."
