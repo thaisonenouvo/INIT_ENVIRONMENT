@@ -30,13 +30,13 @@ install_homebrew() {
   && brew cask install iterm2 \
   && rm -rf /usr/local/var/postgres \
   && brew install postgres \
+  && brew install nvm \
   echo "Successing to setting homebrew..." 
 }
 install_npm() {
   echo "Setting up package npm global..." \
-  && brew install nvm \ 
   && source ~/.zshrc \
-  && mkdir ~/.nvm \ 
+  && mkdir ~/.nvm \
   && npm i -g eslint \
   && npm i -g react-native-cli \
   && npm i -g npm-check-updates \
