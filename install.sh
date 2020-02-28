@@ -19,8 +19,7 @@ install_golang(){
 
 install_homebrew() {
   echo "Setting up homebrew..." \
-  && cd ~ \
-  && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+  && cd ~ && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
   && brew install yarn \
   && brew install tmux \
   && brew install watchman \
