@@ -20,21 +20,21 @@ install_golang(){
 install_homebrew() {
   echo "Setting up homebrew..." \
   && cd ~ && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
-  && brew install yarn \
-  && brew install tmux \
-  && brew install watchman \
-  && brew install heroku/brew/heroku \
-  && brew install qt5  \
-  && pip3 install qutebrowser \
-  && brew install zsh-completions \
-  && brew install neovim \
-  && brew install zsh-syntax-highlighting \
-  && brew uninstall --force postgresql \
-  && brew cask install iterm2 \
-  && rm -rf /usr/local/var/postgres \
-  && brew install postgres \
-  && brew install nvm \
-  echo "Successing to setting homebrew..." 
+#   && brew install yarn \
+#   && brew install tmux \
+#   && brew install watchman \
+#   && brew install heroku/brew/heroku \
+#   && brew install qt5  \
+#   && pip3 install qutebrowser \
+#   && brew install zsh-completions \
+#   && brew install neovim \
+#   && brew install zsh-syntax-highlighting \
+#   && brew uninstall --force postgresql \
+#   && brew cask install iterm2 \
+#   && rm -rf /usr/local/var/postgres \
+#   && brew install postgres \
+#   && brew install nvm \
+#   echo "Successing to setting homebrew..." 
 }
 install_npm() {
   echo "Setting up package npm global..." \
