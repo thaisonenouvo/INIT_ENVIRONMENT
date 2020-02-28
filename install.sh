@@ -54,6 +54,21 @@ install_neovim() {
   echo "Successing to setting neovim..." 
 }
 
+install_app() {
+  read -r -p "Do you want to setup some app? [y|N] " response
+  if [[ $response =~ (y|yes|Y) ]];then
+   echo "Setting up VSCODE..." \
+   && brew update \                           # Fetch latest version of homebrew and formula.
+   && brew tap caskroom/cask \                # Tap the Caskroom/Cask repository from Github using HTTPS.
+   && brew search visual-studio-code \        # Searches all known Casks for a partial or exact match.
+   && brew cask info visual-studio-code \     # Displays information about the given Cask
+   && brew cask install visual-studio-code \  # Install the given cask.
+   && brew cleanup \    
+   echo "Setup vscode Successfully" \
+   success "Setup App Successfully"
+  fi
+}
+
 setup_git() {
   read -r -p "Do you want to setup git? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
