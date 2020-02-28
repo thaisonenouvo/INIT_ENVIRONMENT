@@ -34,7 +34,7 @@ install_homebrew() {
   && rm -rf /usr/local/var/postgres \
   && brew install postgres \
   && brew install nvm \
-  echo "Successing to setting homebrew..." 
+  && echo "Successing to setting homebrew..." 
 }
 install_npm() {
   echo "Setting up package npm global..." \
@@ -43,7 +43,7 @@ install_npm() {
   && npm i -g eslint \
   && npm i -g react-native-cli \
   && npm i -g npm-check-updates \
-  echo "Setting up package npm global..." 
+  && echo "Setting up package npm global..." 
 }
 
 install_neovim() {
@@ -51,7 +51,7 @@ install_neovim() {
   && rm -rf ~/.config/nvim \
   && git clone https://github.com/tranthaison1231/Dotfiles ~/.config/nvim/ \
   && nvim -c 'PlugInstall' \
-  echo "Successing to setting neovim..." 
+  && echo "Successing to setting neovim..." 
 }
 
 install_app() {
