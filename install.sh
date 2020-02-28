@@ -8,9 +8,12 @@ install_oh_my_zsh() {
   && echo "Finished dowload package plugin for zshrc."
 }
 
-install_github(){
-  echo "Setting up github..." \
-  && echo "Finished setting for github."
+install_golang(){
+  echo "Setting up golang..." \
+  && cd ~ \
+  && go get golang.org/dl/go1.14 \
+  && go1.14 download \
+  && echo "Finished setting for golang."
 }
 
 
@@ -84,6 +87,7 @@ if [[ -z $1 ]]; then
     && install_npm \
     && install_neovim \
     && setup_git \
+    && install_golang \
     && echo "Finished installation."
   fi
 else
