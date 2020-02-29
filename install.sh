@@ -34,6 +34,7 @@ install_homebrew() {
   && rm -rf /usr/local/var/postgres \
   && brew install postgres \
   && brew install nvm \
+  && brew install exa \
   && echo "Successing to setting homebrew..." 
 }
 install_npm() {
