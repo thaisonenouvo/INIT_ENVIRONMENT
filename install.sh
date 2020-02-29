@@ -49,8 +49,6 @@ install_npm() {
 
 install_neovim() {
   echo "Setting up neovim..." \
-  && rm -rf ~/.config/nvim \
-  && git clone https://github.com/tranthaison1231/Dotfiles ~/.config/nvim/ \
   && nvim -c 'PlugInstall' \
   && echo "Successing to setting neovim..." 
 }
