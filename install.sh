@@ -1,5 +1,6 @@
 install_oh_my_zsh() {
   echo "Setting up zsh..." \
+  && rm -rf ~/.oh-my-zsh \
   && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
   && cd ~ && rm -rf ~/config/nvim && git clone https://github.com/tranthaison1231/Dotfiles.git ~/.config/nvim/ \
   && source ~/.config/nvim/.zshrc \
