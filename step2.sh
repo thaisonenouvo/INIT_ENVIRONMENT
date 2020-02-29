@@ -59,10 +59,10 @@ if [[ -z $1 ]]; then
   read answer
   if echo "$answer" | grep -iq "^y" ;then
     echo "Installing dependencies..." \
-    # && install_oh_my_zsh \
-    # && install_npm \
-    # && install_neovim \
-    setup_git \
+    install_oh_my_zsh \
+    && install_npm \
+    && install_neovim \
+    && setup_git \
     && install_golang \
     && echo "Finished installation."
   fi
