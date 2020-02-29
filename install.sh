@@ -1,6 +1,6 @@
 install_oh_my_zsh() {
   echo "Setting up zsh..." \
-  && git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh \
+  && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
   && cd ~ && rm -rf ~/config/nvim && git clone https://github.com/tranthaison1231/Dotfiles.git ~/.config/nvim/ \
   && source ~/.config/nvim/.zshrc \
   && git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" \
