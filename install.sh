@@ -1,6 +1,7 @@
 install_oh_my_zsh() {
   echo "Setting up zsh..." \
-  && cd ~ \
+  && cd ~ && rm -rf ~/config/nvim && git clone https://github.com/tranthaison1231/Dotfiles.git ~/.config/nvim/ \
+  && source ~/.config/nvim/.zshrc \
   && git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" \
   && git clone https://github.com/zsh-users/zsh-completions#oh-my-zsh \
   && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting \
