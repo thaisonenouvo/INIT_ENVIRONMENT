@@ -64,6 +64,7 @@ if [[ -z $1 ]]; then
     && install_neovim \
     && setup_git \
     && install_golang \
+    && rm -rf INIT_ENVIROMENT \
     && echo "Finished installation."
   fi
 else
