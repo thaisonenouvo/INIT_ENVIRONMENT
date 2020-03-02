@@ -29,6 +29,8 @@ install_homebrew() {
   && brew search visual-studio-code \
   && brew cask info visual-studio-code \
   && brew cask install visual-studio-code \
+  && brew tap homebrew/cask-fonts \
+  && brew cask install font-fira-code \
   && brew cleanup \
   && echo "Successing to setting homebrew..." 
 }
