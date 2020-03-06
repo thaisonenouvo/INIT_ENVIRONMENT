@@ -31,6 +31,8 @@ install_homebrew() {
   && brew cask install visual-studio-code \
   && brew tap homebrew/cask-fonts \
   && brew cask install font-fira-code \
+  && brew tap jondot/tap \
+  && brew install hygen \
   && brew cleanup \
   && echo "Successing to setting homebrew..." 
 }
