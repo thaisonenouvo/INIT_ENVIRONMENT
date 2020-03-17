@@ -9,6 +9,16 @@ install_oh_my_zsh() {
   echo "Finished dowload package plugin for zshrc."
 }
 
+
+install_flutter(){
+  echo "Setting up golang..." \
+  && cd ~ \
+  && git clone https://github.com/flutter/flutter.git -b stable \
+  && flutter precache \
+  && sudo gem install cocoapods \
+}
+
+
 install_golang(){
   echo "Setting up golang..." \
   && cd ~ \
@@ -64,6 +74,7 @@ if [[ -z $1 ]]; then
     && install_neovim \
     && setup_git \
     && install_golang \
+    && install_flutter \
     && rm -rf INIT_ENVIROMENT \
     && echo "Finished installation."
   fi
