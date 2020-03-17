@@ -15,7 +15,7 @@ install_flutter(){
   && cd ~ \
   && git clone https://github.com/flutter/flutter.git -b stable \
   && flutter precache \
-  && echo 6526393son | sudo -S gem install cocoapods \
+  && echo 6526393son | sudo -S gem install cocoapods
 }
 
 
