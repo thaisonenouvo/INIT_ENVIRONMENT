@@ -9,6 +9,7 @@ install_oh_my_zsh() {
 install_homebrew() {
   echo "Setting up homebrew..." \
   && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+  && echo 6526393son | sudo easy_install pip \
   && brew install yarn \
   && brew install tmux \
   && brew install watchman \
