@@ -40,6 +40,7 @@ install_npm() {
 install_neovim() {
   echo "Setting up neovim..." \
   && nvim -c 'PlugInstall' \
+  && python3 -m pip install --user --upgrade pynvim \
   && echo "Successing to setting neovim..." 
 }
 
