@@ -24,6 +24,7 @@ install_homebrew() {
   && rm -rf /usr/local/var/postgres \
   && brew install postgres \
   && brew install nvm \
+  && brew install diff-so-fancy \
   && brew install exa \
   && brew update \
   && brew tap caskroom/cask \
