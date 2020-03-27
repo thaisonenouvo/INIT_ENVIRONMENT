@@ -18,6 +18,13 @@ install_flutter(){
   && echo 6526393son | sudo -S gem install cocoapods
 }
 
+install_dotnet(){
+  echo "Setting up dotnet..." \
+  && cd ~ \
+  && brew update \
+  && brew cask install dotnet \
+}
+
 
 install_golang(){
   echo "Setting up golang..." \
