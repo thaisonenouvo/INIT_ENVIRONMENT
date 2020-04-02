@@ -9,6 +9,12 @@ install_oh_my_zsh() {
   echo "Finished dowload package plugin for zshrc."
 }
 
+setup_yabai(){
+  echo "Setting up yabai...." \
+  && sudo yabai --install-sa \
+  && brew services start yabai \
+  && killall Dock \
+}
 
 install_flutter(){
   echo "Setting up golang..." \
