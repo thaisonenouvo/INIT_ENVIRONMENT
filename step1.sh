@@ -36,6 +36,7 @@ install_homebrew() {
   && brew cask install font-fira-code \
   && brew tap jondot/tap \
   && brew install hygen \
+  && brew install koekeishiya/formulae/yabai \
   && brew cleanup \
   && echo "Successing to setting homebrew..." 
 }
