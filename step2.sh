@@ -87,6 +87,7 @@ if [[ -z $1 ]]; then
     && install_npm \
     && install_neovim \
     && setup_git \
+    && setup_yabai \
     && install_golang \
     && install_flutter \
     && rm -rf INIT_ENVIROMENT \
